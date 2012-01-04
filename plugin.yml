@@ -1,0 +1,23 @@
+name: HelpCraft
+main: me.soldier.codeix.HelpCraft
+version: 0.1
+commands:
+    HelpMoney:
+        usage: /<command> 
+    HelpLock:
+        usage: /<command> 
+    HelpBB:
+        usage: /<command> 
+permissions:
+    Help.helpmoney:
+        description: Give access to HelpMoney command
+        default: op
+    Help.helpbb:
+        description: Give access to Helpbb command
+        default: op
+    Help.helplock:
+        description: Give access to Helplock command
+        default: op
+    
+
+        
