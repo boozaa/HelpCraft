@@ -1,23 +1,75 @@
 name: HelpCraft
 main: me.soldier.codeix.HelpCraft
-version: 0.1
+version: 1.2
 commands:
-    HelpMoney:
+    HelpEcon:
         usage: /<command> 
     HelpLock:
         usage: /<command> 
-    HelpBB:
+    Helpsec:
+        usage: /<command> 
+    HelpMisc:
+        usage: /<command> 
+    HelpAdmn:
+        usage: /<command> 
+    HelpChat:
+        usage: /<command> 
+    HelpEdit:
+        usage: /<command> 
+    HelpWGen:
+        usage: /<command> 
+    HelpFun:
+        usage: /<command> 
+    HelpGen:
+        usage: /<command> 
+    HelpTp:
+        usage: /<command> 
+    HelpInfo:
+        usage: /<command> 
+    HelpMech:
+        usage: /<command>
+    HelpReload:
         usage: /<command> 
 permissions:
-    Help.helpmoney:
+    Help.helpEcon:
         description: Give access to HelpMoney command
         default: op
-    Help.helpbb:
-        description: Give access to Helpbb command
+    Help.helpsec:
+        description: Give access to Helpsec command
         default: op
     Help.helplock:
         description: Give access to Helplock command
         default: op
-    
-
-        
+    Help.helpmisc:
+        description: Give access to HelpMoney command
+        default: op
+    Help.helpadmn:
+        description: Give access to HelpMoney command
+        default: op
+    Help.helpchat:
+        description: Give access to HelpMoney command
+        default: op
+    Help.helpedit:
+        description: Give access to HelpMoney command
+        default: op
+    Help.helpwgen:
+        description: Give access to HelpMoney command
+        default: op   
+    Help.helpfun:
+        description: Give access to HelpMoney command
+        default: op  
+    Help.helpgen:
+        description: Give access to HelpMoney command
+        default: op
+    Help.helptp:
+        description: Give access to HelpMoney command
+        default: op
+    Help.helpinfo:
+        description: Give access to HelpMoney command
+        default: op
+    Help.helpmech:
+        description: Give access to HelpMoney command
+        default: op
+    Help.helpreload:
+        description: Give access to HelpMoney command
+        default: op
