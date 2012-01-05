@@ -31,6 +31,25 @@ commands:
     HelpReload:
         usage: /<command> 
 permissions:
+    Help.*:
+      description: Give access to all commands
+      children:
+      - Help.helpEcon: true
+      - Help.helpsec: true
+      - Help.helplock: true
+      - Help.helpmisc: true
+      - Help.helpadmn: true
+      - Help.helpchat: true
+      - Help.helpedit: true
+      - Help.helpwgen: true
+      - Help.helpfun: true
+      - Help.helpgen: true
+      - Help.helptp: true
+      - Help.helpinfo: true
+      - Help.helpmech: true
+      - Help.helpreload: true
+
+
     Help.helpEcon:
         description: Give access to HelpMoney command
         default: op
