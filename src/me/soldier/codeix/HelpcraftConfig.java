@@ -55,6 +55,10 @@ public class HelpcraftConfig {
 		String[] listOfStrings4Misc = {"/dynmap show", "/dynmap hide"};
 		this.configDefault.put("HelpMisc", Arrays.asList(listOfStrings4Misc));
 		
+		String[] listOfStrings4CMD = {"essential", "or", "commandbook"};
+		this.configDefault.put("HelpCmd", Arrays.asList(listOfStrings4CMD));
+		
+		this.configDefault.put("Language", "en");
 		
 		if(configFile.exists() == false){
 			for(String key : this.configDefault.keySet()){

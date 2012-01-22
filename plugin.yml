@@ -1,10 +1,14 @@
 name: HelpCraft
 main: me.soldier.codeix.HelpCraft
-version: 1.2
+version: 1.6
 commands:
+    Help?:
+        usage: /<command> 
     HelpEcon:
         usage: /<command> 
     HelpLock:
+        usage: /<command> 
+    HelpCmd:
         usage: /<command> 
     Helpsec:
         usage: /<command> 
@@ -31,23 +35,37 @@ commands:
     HelpReload:
         usage: /<command> 
 permissions:
-    Help.*:
+    Help.user.*:
       description: Give access to all commands
       children:
-      - Help.helpEcon: true
-      - Help.helpsec: true
-      - Help.helplock: true
-      - Help.helpmisc: true
-      - Help.helpadmn: true
-      - Help.helpchat: true
-      - Help.helpedit: true
-      - Help.helpwgen: true
-      - Help.helpfun: true
-      - Help.helpgen: true
-      - Help.helptp: true
-      - Help.helpinfo: true
-      - Help.helpmech: true
-      - Help.helpreload: true
+        Help.helpEcon: true
+        Help.helpsec: true
+        Help.helplock: true
+        Help.helpmisc: true
+        Help.helpchat: true
+        Help.helpfun: true
+        Help.helpgen: true
+        Help.helptp: true
+        Help.helpinfo: true
+        Help.helpmech: true
+        Help.helpreload: true
+    Help.admn.*:
+      description: Give access to all commands
+      children:
+        Help.helpEcon: true
+        Help.helpsec: true
+        Help.helplock: true
+        Help.helpmisc: true
+        Help.helpchat: true
+        Help.helpfun: true
+        Help.helpgen: true
+        Help.helptp: true
+        Help.helpinfo: true
+        Help.helpedit: true
+        Help.helpwgen: true
+        Helphelpadmn: true
+        Help.helpmech: true
+        Help.helpreload: true
 
 
     Help.helpEcon:
