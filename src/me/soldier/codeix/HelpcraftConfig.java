@@ -60,6 +60,8 @@ public class HelpcraftConfig {
 		
 		this.configDefault.put("Language", "en");
 		
+		this.configDefault.put("HelpShop", "Place a chest and then read the following text.....Write: 1st line: nothing ; 2nd line lot ; 3rd line <buy price> ':' <Sell price> ; 4th line: Item name or Id");
+		
 		if(configFile.exists() == false){
 			for(String key : this.configDefault.keySet()){
 				this.config.set(key, configDefault.get(key));

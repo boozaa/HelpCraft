@@ -10,6 +10,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class HelpCraft extends JavaPlugin{
 	
  
+	public static boolean helpshop = false;
+	public HelpBlocks listener = null;
 	Logger log = Logger.getLogger("Minecraft");
 	String pluginDirPath;
 	private File configFile;
@@ -23,7 +25,7 @@ public class HelpCraft extends JavaPlugin{
 	@Override
 	public void onEnable() {
         log.info("[HC]Loading HelpCraft");	
-
+        listener = new HelpBlocks(this);
 		this.pluginDirPath = this.getDataFolder().getAbsolutePath();
 		this.configFile = new File(this.pluginDirPath + File.separator + "config.yml");
 		this.config = new HelpcraftConfig(this.configFile);
@@ -81,10 +83,16 @@ public class HelpCraft extends JavaPlugin{
 			return true;
 		}	
 		
-		
 		if(cmd.getName().equalsIgnoreCase("HelpAdmn")&& sender.hasPermission("Help.helpadmn")){
 			sender.sendMessage(ChatColor.GREEN+""+this.getConfig().getStringList("HelpAdmn"));
 			return true;
+		}else if(sender.hasPermission("Help.helpadmn") == false && cmd.getName().equalsIgnoreCase("HelpAdmn")) sender.sendMessage(ChatColor.RED+"You can't do that");	
+		
+		if(cmd.getName().equalsIgnoreCase("HelpShop")&& sender.hasPermission("Help.helpshop")){
+			sender.sendMessage(ChatColor.GREEN+""+this.getConfig().getString("HelpShop"));
+			helpshop = true;
+			return true;
+			
 		}else if(sender.hasPermission("Help.helpadmn") == false && cmd.getName().equalsIgnoreCase("HelpAdmn")) sender.sendMessage(ChatColor.RED+"You can't do that");
 		
 		if(cmd.getName().equalsIgnoreCase("HelpCmd")&& sender.hasPermission("Help.helpcmd")){
